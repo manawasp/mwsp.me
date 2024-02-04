@@ -1,0 +1,401 @@
+.post {
+  max-width: 65ch;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--fg);
+  margin: auto;
+}
+
+.post a {
+  color: var(--fg-deeper);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(125,125,125,.3);
+  transition: border .3s ease-in-out;
+}
+
+.post a:hover {
+  border-bottom: 1px solid rgba(125,125,125,1);
+}
+
+.post strong {
+  color: var(--fg-deep);
+  font-weight: 600;
+}
+
+.post img {
+  width: 100%;
+}
+
+.post p > img {
+  width: 100%;
+  --uno: shadow rounded-lg;
+  transform: scale(1.05);
+  margin: 2.6em 0;
+  border-radius: 0.5rem;
+}
+
+.post pre.shiki {
+  margin: 1.6em -1em;
+}
+
+/* Code group: override code */
+
+.post .code-group {
+  margin: 2.6em -1em;
+}
+
+.post .code-group pre.shiki {
+  margin: 0;
+}
+
+/* Title */
+
+.post h1 {
+  font-weight: 700;
+  margin-bottom: .4rem;
+}
+
+.dark h1 {
+  color: #f1f1f1;
+}
+
+/* Separator */
+
+.post hr {
+  width: 50px;
+  margin: 3em auto;
+  border-color: #7d7d7d4d;
+}
+
+/* Inline code */
+
+.post p code {
+  color: var(--fg-deep);
+  border-radius: 6px;
+  background: var(--inline-code-bg);
+  padding: 0.15em 0.3em 0.05em;
+  white-space: normal;
+}
+
+.post ul code {
+  color: var(--fg-deep);
+  border-radius: 6px;
+  background: var(--inline-code-bg);
+  padding: 0.15em 0.3em 0.05em;
+  white-space: normal;
+}
+
+/* .post code::before {
+  content: "`";
+}
+
+.post code::after {
+  content: "`";
+} */
+
+.post a code {
+  color: #111827;
+}
+
+/* Block code */
+
+.post pre {
+  overflow-x: auto;
+  overflow: auto;
+  border-radius: 12px;
+  background: var(--code-bg);
+}
+
+.post pre code::before {
+  content: none;
+}
+
+.post pre code::after {
+  content: none;
+}
+
+.post pre code {
+  display: block;
+  font-size: .84em;
+  display: block;
+  overflow: auto;
+  padding: 6px 6px 12px;
+  margin: 18px;
+}
+
+/* Title Anchor */
+
+.post .header-anchor {
+  float: left;
+  margin-top: 0.125em;
+  margin-left: -1.2em;
+  padding-right: 0.5em;
+  font-size: .85em;
+  opacity: 0;
+  text-decoration: none;
+  border: 0 !important;
+}
+
+.post h1:hover .header-anchor,
+.post h1:focus .header-anchor,
+.post h2:hover .header-anchor,
+.post h2:focus .header-anchor,
+.post h3:hover .header-anchor,
+.post h3:focus .header-anchor,
+.post h4:hover .header-anchor,
+.post h4:focus .header-anchor,
+.post h5:hover .header-anchor,
+.post h5:focus .header-anchor,
+.post h6:hover .header-anchor,
+.post h6:focus .header-anchor {
+  opacity: .5;
+}
+
+
+/* Table */
+
+.post table {
+  width: 100%;
+  table-layout: auto;
+  text-align: left;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-size: 0.875em;
+  line-height: 1.7142857;
+}
+
+.post thead {
+  color: var(--fg-deep);
+  font-weight: 600;
+  border-bottom-width: 1px;
+  border-bottom-color: #d1d5db;
+}
+
+.post thead th {
+  vertical-align: bottom;
+  padding-right: 0.5714286em;
+  padding-bottom: 0.5714286em;
+  padding-left: 0.5714286em;
+}
+
+.post tbody tr {
+  border-bottom-width: 1px;
+  border-bottom-color: #e5e7eb;
+}
+
+.post tbody tr:last-child {
+  border-bottom-width: 0;
+}
+
+.post tbody td {
+  vertical-align: top;
+  padding-top: 0.5714286em;
+  padding-right: 0.5714286em;
+  padding-bottom: 0.5714286em;
+  padding-left: 0.5714286em;
+}
+
+/* Blockquote */
+
+.post blockquote {
+  color: inherit;
+  border-left-width: 0.25rem;
+  border-color: rgba(125,125,125,0.3);
+  quotes: "\201C""\201D""\2018""\2019";
+  margin-top: 1.6em;
+  margin-bottom: 1.6em;
+  padding-left: 1em;
+  line-height: 1.6em;
+  margin-left: -1.1em;
+}
+
+.post blockquote p:first-of-type::before {
+  content: open-quote;
+}
+
+.post blockquote p:last-of-type::after {
+  content: close-quote;
+}
+
+/* Spacing */
+
+.post p {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+}
+
+.post img {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.post video {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.post figure {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.post figure > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.post h2 code {
+  font-size: 0.875em;
+}
+
+.post h3 code {
+  font-size: 0.9em;
+}
+
+.post ol {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  list-style-type: none;
+}
+
+.post ul {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  list-style-type: none;
+}
+
+.post li {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.post ul > li {
+  position: relative;
+  padding-left: 1.75em;
+}
+
+.post ul > li:before {
+  content: "";
+  position: absolute;
+  background-color: var(--ul-li-color);
+  border-radius: 50%;
+  width: 0.375em;
+  height: 0.375em;
+  top: 0.6875em;
+  left: 0.25em;
+}
+
+.post ol {
+  counter-reset: item;
+}
+
+.post ol > li:before {
+  color: var(--ol-li-color);
+  padding-left: 6px;
+  padding-right: 6px;
+  content: counter(item) ".  ";
+  counter-increment: item
+}
+
+.post > ul > li p {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+
+.post > ol > li > *:first-child {
+  margin-top: 1.25em;
+}
+
+.post > ol > li > *:last-child {
+  margin-bottom: 1.25em;
+}
+
+.post ul ul, .post ul ol, .post ol ul, .post ol ol {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+
+.post hr + p {
+  margin-top: 0;
+}
+
+.post h2 + p {
+  margin-top: 0;
+}
+
+.post h2 + h3 {
+  margin-top: 1.8em;
+}
+
+.post h3 + p {
+  margin-top: 0;
+}
+
+.post h4 + p {
+  margin-top: 0;
+}
+
+.post h6 {
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  opacity: 0.5;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.post thead th:first-child {
+  padding-left: 0;
+}
+
+.post thead th:last-child {
+  padding-right: 0;
+}
+
+.post tbody td:first-child {
+  padding-left: 0;
+}
+
+.post tbody td:last-child {
+  padding-right: 0;
+}
+
+.post > :first-child {
+  margin-top: 0;
+}
+
+.post > :last-child {
+  margin-bottom: 0;
+}
+
+.post b {
+  color: var(--fg-deep);
+}
+
+.post em {
+  color: inherit;
+}
+
+.post summary {
+  cursor: pointer;
+}
+
+.post details > div {
+  margin-top: .5rem;
+  padding-top: 0.75rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.25rem;
+  border-width: 1px;
+  --un-border-opacity: .27;
+  border-color: rgb(136 136 136 / var(--un-border-opacity));
+}
+
+
+@media screen and (max-width: 1450px) and (min-width: 1130px) {
+  .post {
+    margin-left: 380px;
+    margin-right: 0;
+  }
+}
+

@@ -1,0 +1,125 @@
+:root {
+  --home-fg: #262127;
+  --c-bg: #fff;
+  --c-scrollbar: #ccc;
+  --c-scrollbar-hover: #aaa;
+  --fg: #24292f;
+  --fg-deep: #333;
+  --fg-deeper: #222;
+  --code-bg: #f0f6fb;
+  --code-bg-tab-fg: #333;
+  --code-bg-tab-separator: #E1E4F4;
+  --inline-code-bg: rgba(255, 229, 100, .2);
+  --ul-li-color: #d1d5db;
+  --ol-li-color: #989da5;
+}
+
+*,:before,:after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+}
+
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  scroll-behavior: smooth;
+}
+
+html.dark {
+  --home-fg: #eee;
+  --c-bg: #22272E;
+  --c-scrollbar: #3a3d42;
+  --c-scrollbar-hover: #515760;
+  --fg: #93939b;
+  --fg-deep: #e2e2e2;
+  --fg-deeper: #f1f1f1;
+  --code-bg: #2b313a;
+  --code-bg-tab-fg: #ddd;
+  --code-bg-tab-separator: #444e5b;
+  --inline-code-bg: rgba(100, 155, 255, .15);
+  --ul-li-color: #4e535a;
+  --ol-li-color: #4e535a;
+}
+
+body {
+  margin: 0;
+  line-height: inherit;
+  background: var(--c-bg);
+}
+
+hr {
+  height: 0;
+  color: inherit;
+  border-top-width: 1px
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 7px;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+  background: var(--c-bg);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--c-scrollbar);
+  border-radius: 10px;
+  transition: all .3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--c-scrollbar-hover);
+}
+
+.main-w {
+  max-width: 65ch;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* Title */
+
+h1 {
+  color: var(--fg-deeper);
+  font-weight: 600;
+  font-size: 2.25em;
+  margin-top: 0;
+  margin-bottom: 0.8888889em;
+  line-height: 1.1111111;
+}
+
+h2 {
+  color: var(--fg-deep);
+  font-weight: 700;
+  font-size: 1.6em;
+  margin-top: 2.2em;
+  margin-bottom: .3em;
+  line-height: 1.3333333;
+}
+
+h3 {
+  color: var(--fg-deep);
+  font-weight: 600;
+  font-size: 1.25em;
+  margin-top: 2.2em;
+  margin-bottom: .3em;
+  line-height: 1.6;
+}
+
+h4 {
+  color: inherit;
+  font-weight: 600;
+  margin-top: 2.2em;
+  margin-bottom: .3em;
+  line-height: 1.5;
+}
